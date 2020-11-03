@@ -37,9 +37,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
@@ -53,15 +54,15 @@
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            this.panel9.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -69,7 +70,6 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -162,6 +162,25 @@
             this.panel2.Size = new System.Drawing.Size(406, 350);
             this.panel2.TabIndex = 0;
             // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.dgvProduct);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(0, 30);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(406, 320);
+            this.panel15.TabIndex = 2;
+            // 
+            // dgvProduct
+            // 
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProduct.Location = new System.Drawing.Point(0, 0);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
+            this.dgvProduct.Size = new System.Drawing.Size(406, 320);
+            this.dgvProduct.TabIndex = 0;
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label1);
@@ -180,15 +199,6 @@
             this.label1.Size = new System.Drawing.Size(154, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách sản phẩm";
-            // 
-            // dgvProduct
-            // 
-            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProduct.Location = new System.Drawing.Point(0, 0);
-            this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.Size = new System.Drawing.Size(406, 320);
-            this.dgvProduct.TabIndex = 0;
             // 
             // panel3
             // 
@@ -324,15 +334,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Số lượng";
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.dgvProduct);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(0, 30);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(406, 320);
-            this.panel15.TabIndex = 2;
-            // 
             // Create_Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,9 +352,10 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -363,7 +365,6 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

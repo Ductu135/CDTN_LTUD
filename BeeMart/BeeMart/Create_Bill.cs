@@ -63,6 +63,14 @@ namespace BeeMart
                 }
                 table.Rows.Add(row);
                 dgvBill.DataSource = table;
+
+                //Calculate Total of Bill
+                int bill_Total = 0;
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    bill_Total += Int32.Parse(table.Rows[i]["Total"].ToString());
+                }
+                txtTotal.Text = bill_Total.ToString("#,##0");
             }    
         }
 

@@ -40,7 +40,7 @@ namespace BeeMart
                 dgvBill.DataSource = ds.Tables["tblBill"];
                 for(int i = 0; i < ds.Tables["tblBill"].Rows.Count; i++)
                 {
-                    total += int.Parse(ds.Tables["tblBill"].Rows[i][4].ToString());
+                    total += int.Parse(ds.Tables["tblBill"].Rows[i][4].ToString("#,##0"));
                 }
                 lblTurnover.Text = total.ToString();
             }    
@@ -53,7 +53,7 @@ namespace BeeMart
         private void btnBack_Click(object sender, EventArgs e)
         {
             HomePage homePage = new HomePage();
-            this.Hide();
+            this.Hide(); 
             homePage.ShowDialog();
         }
 
