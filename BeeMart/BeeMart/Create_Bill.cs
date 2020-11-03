@@ -65,18 +65,23 @@ namespace BeeMart
                 dgvBill.DataSource = table;
 
                 //Calculate Total of Bill
-                int bill_Total = 0;
-                for (int i = 0; i < table.Rows.Count; i++)
-                {
-                    bill_Total += Int32.Parse(table.Rows[i]["Total"].ToString());
-                }
-                txtTotal.Text = bill_Total.ToString("#,##0");
+                cal_billTotal();
             }    
         }
 
         private void btnDelProduct_Click(object sender, EventArgs e)
         {
-
+            string productID = dgvBill.CurrentRow.Cells["ProductID"].Value.ToString();
+            for(int i = 0; i < table.Rows.Count; i++)
+            {
+                if(table.Rows[i]["ProductID"].ToString() == productID)
+                {
+                    DataRow row = table.Rows[i];
+                    table.Rows.Remove(row);
+                }    
+            }
+            dgvBill.DataSource = table;
+            cal_billTotal();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -108,6 +113,17 @@ namespace BeeMart
         {
             int test;
             return int.TryParse(PhoneNum, out test);
+        }
+
+        public int cal_billTotal()
+        {
+            int bill_Total = 0;
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                bill_Total += Int32.Parse(table.Rows[i]["Total"].ToString());
+            }
+            txtTotal.Text = bill_Total.ToString("#,##0");
+            return bill_Total;
         }
     }
 }

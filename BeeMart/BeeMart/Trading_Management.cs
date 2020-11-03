@@ -40,9 +40,9 @@ namespace BeeMart
                 dgvBill.DataSource = ds.Tables["tblBill"];
                 for(int i = 0; i < ds.Tables["tblBill"].Rows.Count; i++)
                 {
-                    total += int.Parse(ds.Tables["tblBill"].Rows[i][4].ToString("#,##0"));
+                    total += int.Parse(ds.Tables["tblBill"].Rows[i][4].ToString());
                 }
-                lblTurnover.Text = total.ToString();
+                lblTurnover.Text = total.ToString("#,##0");
             }    
             else
             {
