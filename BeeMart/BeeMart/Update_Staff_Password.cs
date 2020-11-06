@@ -70,8 +70,8 @@ namespace BeeMart
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Staff_Management staff_Management = new Staff_Management();
+            this.Hide();
             staff_Management.ShowDialog();
         }
     }

@@ -79,8 +79,8 @@ namespace BeeMart
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Product_Management product_Management = new Product_Management();
+            this.Hide();
             product_Management.ShowDialog();
         }
 

@@ -46,8 +46,8 @@ namespace BeeMart
         private void btnBack_Click(object sender, EventArgs e)
         {
             HomePage homePage = new HomePage();
-            homePage.ShowDialog();
             this.Hide();
+            homePage.ShowDialog();
         }
 
         private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
